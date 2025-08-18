@@ -1,0 +1,1 @@
+my_int : int = 1
