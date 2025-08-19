@@ -21,6 +21,9 @@ build-backend = "poetry.core.masonry.api"
 black = "24.10.0"
 ruff = "0.8.2"
 mypy = "^1.17.1"
+pytest = "^8.4.1"
+coverage = "^7.10.4"
+pytest-asyncio = "^1.1.0"
 
 [tool.black]
 line-length = 120
@@ -32,3 +35,10 @@ target-version = "py313"
 plugins = ["pydantic.mypy"]
 python_version = 3.13
 strict = true
+
+[tool.coverage.run]
+omit = ["*/test_*.py"]  # 루트 혹은 루트 아래의 파일들 중 test_ 로 시작하는 파일을 제외.
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
