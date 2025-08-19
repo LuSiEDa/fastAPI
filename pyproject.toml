@@ -3,7 +3,7 @@ name = "when2meet"
 version = "0.1.0"
 description = "When2Meet clone project backend"
 authors = [
-   "LuSiEDa <wltlrtmdgus@naver.com>"
+    {name = "LuSiEDa", email = "wltlrtmdgus@naver.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.12"
