@@ -1,12 +1,12 @@
 [project]
 name = "when2meet"
 version = "0.1.0"
-description = ""
+description = "When2Meet clone project backend"
 authors = [
-    {name = "LuSiEDa",email = "wltlrtmdgus@naver.com"}
+   "LuSiEDa <wltlrtmdgus@naver.com>"
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "fastapi (>=0.116.1,<0.117.0)",
     "uvicorn (>=0.35.0,<0.36.0)"
