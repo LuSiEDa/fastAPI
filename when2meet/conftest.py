@@ -15,7 +15,8 @@ TEST_BASE_URL = "http://test"
 TEST_DB_LABEL = "models"
 TEST_DB_TZ = "Asia/Seoul"
 
-def get_test_db_config()->dict[str, Any]:
+
+def get_test_db_config() -> dict[str, Any]:
     tortoise_config = generate_config(
         db_url=f"mysql://{config.MYSQL_USER}:{config.MYSQL_PASSWORD}@{config.MYSQL_HOST}:{config.MYSQL_PORT}/test",
         app_modules={TEST_DB_LABEL: TORTOISE_APP_MODELS},

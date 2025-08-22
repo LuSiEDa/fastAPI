@@ -10,10 +10,10 @@ TORTOISE_APP_MODELS = {
 }
 
 TORTOISE_ORM = {
-    "connections":{
-        "default":{
-            "engine":"tortoise.backends.mysql",
-            "credentials":{
+    "connections": {
+        "default": {
+            "engine": "tortoise.backends.mysql",
+            "credentials": {
                 "host": config.MYSQL_HOST,
                 "port": config.MYSQL_PORT,
                 "user": config.MYSQL_USER,
@@ -24,14 +24,15 @@ TORTOISE_ORM = {
             },
         },
     },
-    "apps":{
-        "models":{
+    "apps": {
+        "models": {
             "models": TORTOISE_APP_MODELS,
         },
     },
-    "timezone":"Asia/Seoul",
+    "timezone": "Asia/Seoul",
 }
 
-def initialize_tortoise(app:FastAPI)->None:
-    Tortoise.init_models(TORTOISE_APP_MODELS,"models")
+
+def initialize_tortoise(app: FastAPI) -> None:
+    Tortoise.init_models(TORTOISE_APP_MODELS, "models")
     register_tortoise(app, config=TORTOISE_ORM)

@@ -1,3 +1,9 @@
+import timeit
+import json
+
+import orjson
+
+
 TWITTER_JSON = """
 {
       "text": "RT @PostGradProblem: In preparation for the NFL lockout, I will be spending twice as much time analyzing my fantasy baseball team during ...", 
@@ -145,12 +151,6 @@ TWITTER_JSON = """
       "geo": null
 }
 """
-
-import timeit
-import json
-
-import orjson
-
 
 print(timeit.timeit(lambda: json.dumps(TWITTER_JSON)))
 print(timeit.timeit(lambda: orjson.dumps(TWITTER_JSON)))
